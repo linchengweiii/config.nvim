@@ -11,6 +11,9 @@ require('lazy').setup({
   -- Navigator
   'christoomey/vim-tmux-navigator',
 
+  -- Diagnostic
+  'folke/trouble.nvim',
+
   -- LSP Configuration & Plugins
   require 'plugins.nvim-lspconfig',
 
