@@ -10,6 +10,11 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 
 -- [[ Plugin Keymaps]]
 
+-- Fugitive keymaps
+vim.keymap.set('n', 'gst', '<Cmd>G status<CR>', { silent = true, desc = 'Git Commit' })
+vim.keymap.set('n', 'cc', '<Cmd>G commit<CR>', { silent = true, desc = 'Git Commit' })
+vim.keymap.set('n', 'dv', '<Cmd>Gvdiffsplit<CR>', { silent = true, desc = 'Git Diff Vertical split' })
+
 -- Telescope keymaps
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
