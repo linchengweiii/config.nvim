@@ -24,6 +24,9 @@ return {
           ['<C-d>'] = false,
         },
       },
+      layout_config = {
+        preview_cutoff = 150
+      }
     },
   },
   config = function(_, opts)
