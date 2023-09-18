@@ -29,6 +29,11 @@ git clone https://github.com/linchengweiii/config.nvim.git %userprofile%\AppData
 
 ### Post Installation
 
+Telescope.nvim:
+
+- [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) is required for
+  `live_grep` and `grep_string` and is the first priority for `find_files`.
+
 Run the following command and then **you are ready to go**!
 
 ```sh
