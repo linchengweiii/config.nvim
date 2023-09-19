@@ -16,19 +16,24 @@ return {
       end,
     },
   },
-  opts = {
-    defaults = {
-      mappings = {
-        i = {
-          ['<C-u>'] = false,
-          ['<C-d>'] = false,
+  opts = function()
+    return {
+      defaults = {
+        mappings = {
+          i = {
+            ['<C-u>'] = false,
+            ['<C-d>'] = require('telescope.actions').delete_buffer,
+          },
+          n = {
+            ['<C-d>'] = require('telescope.actions').delete_buffer,
+          }
         },
+        layout_config = {
+          preview_cutoff = 150
+        }
       },
-      layout_config = {
-        preview_cutoff = 150
-      }
-    },
-  },
+    }
+  end,
   config = function(_, opts)
     require('telescope').setup(opts)
 
