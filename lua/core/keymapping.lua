@@ -10,6 +10,9 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 
 -- [[ Plugin Keymaps]]
 
+-- Undotree keymaps
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = 'toggle [u]ndo tree' })
+
 -- Fugitive keymaps
 vim.keymap.set('n', 'gs', vim.cmd.Git, { desc = 'Git' })
 vim.keymap.set('n', 'cc', '<Cmd>G commit<CR>', { silent = true, desc = 'Git Commit' })

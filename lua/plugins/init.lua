@@ -14,6 +14,9 @@ require('lazy').setup({
   -- Diagnostic
   'folke/trouble.nvim',
 
+  -- Undo Tree
+  'mbbill/undotree',
+
   -- LSP Configuration & Plugins
   require 'plugins.nvim-lspconfig',
 
