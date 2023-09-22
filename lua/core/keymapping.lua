@@ -37,9 +37,10 @@ vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { de
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
+vim.keymap.set('n', '<leader>fb', '<Cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>', { noremap = true, desc = '[F]ile [B]rowser' })
 
 -- NvimTree keymaps
-vim.keymap.set('n', '<leader>t', require('nvim-tree.api').tree.toggle, { desc = 'Toggle NvimTree' })
+vim.keymap.set('n', '<leader>ft', require('nvim-tree.api').tree.toggle, { desc = 'Toggle [F]ile [T]ree' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
@@ -48,4 +49,4 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Formatter keymaps
-vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, { desc = '[f]ormat the file' })
+vim.keymap.set('n', '<leader>ff', vim.lsp.buf.format, { desc = '[F]ormat current [F]ile' })

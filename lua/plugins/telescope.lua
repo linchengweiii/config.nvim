@@ -15,6 +15,7 @@ return {
         return vim.fn.executable 'make' == 1
       end,
     },
+    'nvim-telescope/telescope-file-browser.nvim',
   },
   opts = function()
     return {
@@ -36,6 +37,8 @@ return {
   end,
   config = function(_, opts)
     require('telescope').setup(opts)
+
+    require('telescope').load_extension 'file_browser'
 
     -- Enable telescope fzf native, if installed
     pcall(require('telescope').load_extension, 'fzf')
