@@ -60,6 +60,7 @@ return {
     end
 
     local servers = {
+      clangd = {},
       eslint = {},
       tailwindcss = {},
       tsserver = {},
