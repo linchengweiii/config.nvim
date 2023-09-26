@@ -22,6 +22,9 @@ vim.o.mouse = 'a'
 -- Sync clipboard between OS and Neovim.
 -- vim.o.clipboard = 'unnamedplus'
 
+-- Expand tab
+vim.o.expandtab = true
+
 -- Enable break indent
 vim.o.breakindent = true
 
