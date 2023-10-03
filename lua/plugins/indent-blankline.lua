@@ -1,9 +1,14 @@
 return {
   'lukas-reineke/indent-blankline.nvim',
   -- Enable `lukas-reineke/indent-blankline.nvim`
-  -- See `:help indent_blankline.txt`
+  -- See `:help ibl.config`
+  main = 'ibl',
   opts = {
-    char = '┊',
-    show_trailing_blankline_indent = false,
+    indent = {
+      char = '┊',
+    },
+    whitespace = {
+      remove_blankline_trail = false
+    },
   },
 }
