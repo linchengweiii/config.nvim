@@ -18,6 +18,9 @@ vim.keymap.set('n', 'gs', vim.cmd.Git, { desc = 'Git' })
 vim.keymap.set('n', 'cc', '<Cmd>G commit<CR>', { silent = true, desc = 'Git Commit' })
 vim.keymap.set('n', 'dv', '<Cmd>Gvdiffsplit<CR>', { silent = true, desc = 'Git Diff Vertical split' })
 
+-- Lazygit keymaps
+vim.keymap.set('n', '<leader>gg', vim.cmd.LazyGit, { silent = true, desc = 'Lazy Git' })
+
 -- Telescope keymaps
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
