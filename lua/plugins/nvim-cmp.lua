@@ -10,6 +10,9 @@ return {
 
     -- Adds a number of user-friendly snippets
     'rafamadriz/friendly-snippets',
+
+    -- Adds a path completion source
+    'hrsh7th/cmp-path',
   },
   opts = function()
     local cmp = require 'cmp'
@@ -52,6 +55,7 @@ return {
       sources = {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
+        { name = 'path' },
       },
     }
   end,
