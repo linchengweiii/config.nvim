@@ -20,7 +20,7 @@ vim.o.hlsearch = false
 vim.o.mouse = 'a'
 
 -- Sync clipboard between OS and Neovim.
--- vim.o.clipboard = 'unnamedplus'
+vim.o.clipboard = 'unnamedplus'
 
 -- Expand tab
 vim.o.expandtab = true
