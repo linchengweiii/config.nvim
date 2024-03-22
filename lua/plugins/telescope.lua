@@ -24,6 +24,8 @@ return {
           i = {
             ['<C-u>'] = false,
             ['<C-d>'] = require('telescope.actions').delete_buffer,
+            ['<C-j>'] = require('telescope.actions').move_selection_next,
+            ['<C-k>'] = require('telescope.actions').move_selection_previous,
           },
           n = {
             ['<C-d>'] = require('telescope.actions').delete_buffer,
