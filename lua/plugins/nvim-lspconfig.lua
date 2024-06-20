@@ -65,15 +65,7 @@ return {
       tailwindcss = {},
       tsserver = {},
       cssls = {},
-      volar = {
-        filetypes = {
-          'typescript',
-          'javascript',
-          'typescriptreact',
-          'javascriptreact',
-          'vue',
-        },
-      },
+      volar = {},
       jsonls = {},
       stylelint_lsp = {},
       lua_ls = {
@@ -101,7 +93,33 @@ return {
           capabilities = capabilities,
           on_attach = on_attach,
           settings = servers[server_name],
-          filetypes = (servers[server_name] or {}).filetypes,
+        }
+      end,
+      ['tsserver'] = function()
+        local vue_language_server_path = require('mason-registry').get_package('vue-language-server'):get_install_path() .. '/node_modules/@vue/language-server'
+        require('lspconfig').tsserver.setup {
+          capabilities = capabilities,
+          on_attach = on_attach,
+          init_options = {
+            plugins = {
+              {
+                name = '@vue/typescript-plugin',
+                location = vue_language_server_path,
+                languages = { 'vue' },
+              },
+            },
+          },
+        }
+      end,
+      ['volar'] = function()
+        require('lspconfig').volar.setup {
+          capabilities = capabilities,
+          on_attach = on_attach,
+          init_options = {
+            vue = {
+              hybridMode = false,
+            },
+          },
         }
       end,
     }
