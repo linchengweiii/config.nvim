@@ -3,7 +3,7 @@ return {
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',
   },
-  build = ':tsupdate',
+  build = ':TSUpdate',
   opts = {
     -- Add languages to be installed here that you want installed for treesitter
     ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vue', 'css', 'scss', 'vimdoc', 'vim' },
