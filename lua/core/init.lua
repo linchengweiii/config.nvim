@@ -4,6 +4,21 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Enable folding
+vim.o.foldenable = true
+vim.o.foldlevel = 99
+vim.wo.foldmethod = 'expr'
+vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.api.nvim_create_autocmd('BufEnter', {
+  callback = function()
+    if vim.opt.foldmethod == 'expr' then
+      vim.schedule(function()
+        vim.opt.foldmethod = 'expr'
+      end)
+    end
+  end,
+})
+
 -- [[ Setting options ]] --
 -- See `:help vim.o`
 
