@@ -44,6 +44,9 @@ return {
       -- See `:help K` for why this keymap
       nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
       nmap('J', vim.lsp.buf.signature_help, 'Signature Documentation')
+      nmap('H', function()
+        vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled {}, nil)
+      end, 'Toogle Inlay [H]ints')
 
       -- Lesser used LSP functionality
       nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
