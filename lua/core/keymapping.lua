@@ -41,7 +41,12 @@ vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { de
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
-vim.keymap.set('n', '<leader>fb', '<Cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>', { noremap = true, desc = '[F]ile [B]rowser' })
+vim.keymap.set('n', '<leader>fb', function ()
+  require('telescope').extensions.file_browser.file_browser {
+    path = vim.fn.expand('%:p:h'),
+    select_buffer = true,
+  }
+end, { noremap = true, desc = '[F]ile [B]rowser' })
 
 -- NvimTree keymaps
 vim.keymap.set('n', '<leader>ft', require('nvim-tree.api').tree.toggle, { desc = 'Toggle [F]ile [T]ree' })
