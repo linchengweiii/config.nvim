@@ -100,6 +100,20 @@ return {
         require('lspconfig').tsserver.setup {
           capabilities = capabilities,
           on_attach = on_attach,
+          settings = {
+            typescript = {
+              inlayHints = {
+                includeInlayParameterNameHints = 'none',
+                includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+                includeInlayFunctionParameterTypeHints = true,
+                includeInlayVariableTypeHints = false,
+                includeInlayVariableTypeHintsWhenTypeMatchesName = false,
+                includeInlayPropertyDeclarationTypeHints = true,
+                includeInlayFunctionLikeReturnTypeHints = true,
+                includeInlayEnumMemberValueHints = true,
+              },
+            },
+          },
           init_options = {
             plugins = {
               {
