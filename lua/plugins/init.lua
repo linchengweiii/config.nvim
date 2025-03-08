@@ -45,6 +45,9 @@ require('lazy').setup({
   -- "gc" to comment visual regions/lines
   require 'plugins.comment',
 
+  -- Todo comments
+  require 'plugins.todo-comments',
+
   -- Fuzzy Finder (files, lsp, etc)
   require 'plugins.telescope',
 
