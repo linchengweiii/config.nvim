@@ -17,6 +17,8 @@ require('lazy').setup({
   -- Undo Tree
   'mbbill/undotree',
 
+  require 'plugins.copilot',
+
   -- LSP Configuration & Plugins
   require 'plugins.nvim-mason',
   require 'plugins.nvim-lspconfig',
