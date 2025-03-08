@@ -18,7 +18,11 @@ require('lazy').setup({
   'mbbill/undotree',
 
   -- LSP Configuration & Plugins
+  require 'plugins.nvim-mason',
   require 'plugins.nvim-lspconfig',
+
+  -- Formatter
+  require 'plugins.format',
 
   -- Autocompletion
   require 'plugins.nvim-cmp',
