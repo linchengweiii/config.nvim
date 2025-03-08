@@ -2,6 +2,7 @@ return {
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',
+    'windwp/nvim-ts-autotag',
   },
   build = ':TSUpdate',
   opts = {
@@ -16,6 +17,11 @@ return {
 
     -- List of parsers to ignore installing. Defaults to all
     ignore_install = { 'all' },
+
+    -- Enable autotagging (w/ nvim-ts-autotag plugin)
+    autotag = {
+      enable = true,
+    },
 
     highlight = { enable = true },
     indent = { enable = true },
